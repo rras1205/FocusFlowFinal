@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Session"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Task Name -->
+    <EditText
+        android:id="@+id/etSessionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What are you working on?"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration Suggestions:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <!-- Presets (Radio Group) -->
+    <RadioGroup
+        android:id="@+id/radioGroupPresets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- UPDATED TEXT HERE -->
+        <RadioButton
+            android:id="@+id/rbStandard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standard (25m Work / 5m Short / 15m Long)"
+            android:checked="true"/>
+
+        <!-- UPDATED TEXT HERE -->
+        <RadioButton
+            android:id="@+id/rbLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deep Work (50m Work / 10m Short / 20m Long)"/>
+
+        <RadioButton
+            android:id="@+id/rbCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customize Myself"/>
+    </RadioGroup>
+
+    <!-- Custom Inputs (Hidden by default) -->
+    <LinearLayout
+        android:id="@+id/layoutCustomInputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etWorkDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Work (mins)"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etBreakDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Short Break (mins)"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etLongBreakDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Long Break (mins)"
+            android:inputType="number"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <!-- BUTTONS ROW -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <!-- CANCEL / BACK BUTTON -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Back"
+            android:backgroundTint="#888888"
+            android:layout_marginEnd="20dp"/>
+
+        <!-- SAVE BUTTON -->
+        <Button
+            android:id="@+id/btnSaveSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Preset"
+            android:backgroundTint="#4A70A9"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Bottom Navigation Bar -->
+        <include
+            android:id="@+id/bottom_nav"
+            layout="@layout/navigation"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

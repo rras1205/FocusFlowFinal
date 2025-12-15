@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EFECE3">
+
+    <!-- Cycle Counter (Top Right) -->
+    <TextView
+        android:id="@+id/tvCycleCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cycle: 1 / 4"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="#333333"/>
+
+    <!-- Clearer AI Button (Top Left) -->
+    <Button
+        android:id="@+id/btnAiAssistant"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"
+        android:text="AI Help 🤖"
+        android:textSize="12sp"
+        android:backgroundTint="#8FABD4"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="10dp"/>
+
+    <!-- Main Timer Area -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvSessionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOCUS SESSION"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#4A70A9"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25:00"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            android:textColor="#222222"/>
+
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Stay Focused!"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+    <!-- Controls Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_container"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Preset"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#009688"/>
+
+        <Button
+            android:id="@+id/btnStartPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#38588E"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="#555555"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+        <include
+            android:id="@+id/bottom_nav"
+            layout="@layout/navigation"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
