@@ -72,3 +72,28 @@ Users can define their own focus cycles (work duration, short breaks, long break
 |----------------------|
 | ![Summary](screenshots/ProductivitySummary.png) |
 
+## Technology Stack
+
+- **Language:** Java
+- **Platform:** Android SDK
+- **UI:** XML layouts
+- **Local Storage:** On-device persistence (e.g., SharedPreferences or local database)
+- **Build System:** Gradle
+
+## Architecture Overview
+
+The application is structured around clear separation between user interface logic, timer control logic, and data persistence.
+
+- **Activities** manage user interaction, navigation, and screen state.
+- **Timer logic** controls countdown behavior and Pomodoro cycle transitions.
+- **Local storage** is used to persist user profiles, timer configurations, and session progress on the device.
+
+The design prioritizes deterministic timer behavior and simplicity over architectural complexity.
+
+## Data Handling
+
+- User profiles and timer configurations are stored locally on the device.
+- Session progress and productivity summaries are persisted per user.
+- No cloud services or external servers are used in this prototype.
+
+
