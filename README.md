@@ -96,4 +96,21 @@ The design prioritizes deterministic timer behavior and simplicity over architec
 - Session progress and productivity summaries are persisted per user.
 - No cloud services or external servers are used in this prototype.
 
+## Limitations
+
+This application is a functional prototype built with a limited scope. As a result:
+
+- User accounts and sessions are stored locally and only work on a single device.
+- There is no cloud synchronization or cross-device login support.
+- Error handling and input validation are minimal.
+- Productivity data is basic and intended for demonstration rather than detailed analytics.
+
+## Future Improvements
+
+- Integrate cloud-based authentication and user synchronization.
+- Enable cross-device access to user profiles and productivity data.
+- Expand productivity analytics and session history visualization.
+- Improve input validation and error handling.
+- Add optional notifications and background timer support.
+
 
