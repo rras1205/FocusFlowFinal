@@ -1,4 +1,4 @@
-# ProductivityAssistant
+# FocusFlow
 
 Android prototype for a multi-user Pomodoro timer with customizable focus cycles and on-device data persistence.
 
@@ -7,7 +7,7 @@ Android prototype for a multi-user Pomodoro timer with customizable focus cycles
 
 ## Project Overview
 
-ProductivityAssistant is an Android application prototype designed to help students improve focus and time management using the Pomodoro technique.
+FocusFlow is an Android application prototype designed to help students improve focus and time management using the Pomodoro technique.
 
 The app allows users to:
 - Create local user profiles on a single device
