@@ -52,8 +52,8 @@ Users can define their own focus cycles (work duration, short breaks, long break
 
 ### Timer Flow
 
-| Focus Session | Short Break | Long Break |
-|---------------|-------------|------------|
+| Productivity Assistant | Focus Session & Short Break | Long Break |
+|------------------------|-----------------------------|------------|
 | ![Focus](screenshots/ProductivityAssistant.png) | ![Short Break](screenshots/MainPage-ShortBreak.png) | ![Long Break](screenshots/MainPage-LongBreak.png) |
 
 ---
