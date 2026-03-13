@@ -75,9 +75,9 @@ Users can define their own focus cycles (work duration, short breaks, long break
 ## Technology Stack
 
 - **Language:** Java
-- **Platform:** Android SDK
+- **Platform:** Android Studio
 - **UI:** XML layouts
-- **Local Storage:** On-device persistence (e.g., SharedPreferences or local database)
+- **Local Storage:** On-device persistence (e.g., SharedPreferences or local database). SQLite was also employed with Room operated as an extension of it. 
 - **Build System:** Gradle
 
 ## Architecture Overview
@@ -86,7 +86,7 @@ The application is structured around clear separation between user interface log
 
 - **Activities** manage user interaction, navigation, and screen state.
 - **Timer logic** controls countdown behavior and Pomodoro cycle transitions.
-- **Local storage** is used to persist user profiles, timer configurations, and session progress on the device.
+- **Local storage** is used to persist user profiles, timer configurations, and session progress on the device. 
 
 The design prioritizes deterministic timer behavior and simplicity over architectural complexity.
 
